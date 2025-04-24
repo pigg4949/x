@@ -1,0 +1,10 @@
+# DB
+.env
+
+# node.js 에서 생기는 파일
+node_modules/
+package-lock.json
+
+# .DS_Store : Mac OS 에서 생겨나는 파일
+
+*.txt
