@@ -32,7 +32,7 @@ export async function updatePost(req, res, next) {
   const id = req.params.id;
   const text = req.body.text;
   const update = await postRepository.update(id, text);
-  if (post) {
+  if (update) {
     res.status(201).json(update);
   } else {
     res.status(404).json({ message: `${id}의 포스트가 없습니다.` });
