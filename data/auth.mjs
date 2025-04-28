@@ -62,3 +62,12 @@ export async function login(userid, password) {
   );
   return user;
 }
+
+// 아이디 찾기(중복방지)
+export async function findByUserid(userid) {
+  return users.find((user) => user.userid === userid);
+}
+
+export async function findByid(id) {
+  return users.find((user) => user.id === id);
+}
