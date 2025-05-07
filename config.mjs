@@ -16,9 +16,16 @@ export const config = {
     expiresInSec: parseInt(required("JWT_EXPIRES_SEC", 86400)),
   },
   bcrypt: {
-    saltRounds: parseInt(required("BCRYPT_SALT_ROUNDS"), 10),
+    saltRounds: parseInt(required("BCRYPT_SALT_ROUNDS", 10)),
   },
   host: {
-    port: parseInt(required("HOST_PORT"), 8000),
+    port: parseInt(required("HOST_PORT", 8080)),
+  },
+  db: {
+    host: required("DB_HOST"),
+    user: required("DB_USER"),
+    password: required("DB_PASSWORD"),
+    database: required("DB_DATABASE"),
+    port: required("DB_PORT"),
   },
 };
