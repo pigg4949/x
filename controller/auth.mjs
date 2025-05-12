@@ -16,12 +16,14 @@ export async function signup(req, res, next) {
   const { userid, password, name, email, url } = req.body;
 
   //회원 중복 체크
+  /*
   const found = await authRepository.findByUserid(userid);
   if (found) {
     return res
       .status(409)
       .json({ message: `${userid}는(은) 이미 존재하는 아이디입니다.` });
   }
+      */
 
   const hashed = bcrypt.hashSync(password, bcryptSaltRounds);
 
